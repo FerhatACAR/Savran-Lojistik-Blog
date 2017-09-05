@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@import url("Style.css");
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header{padding:100px 0;}
+
+#header #logo{text-align:center;}
+#header #logo *{margin:0; padding:0; line-height:1;}
+#header #logo {font-size:42px; letter-spacing:5px; text-transform:uppercase;}
+#header #logo p{margin-top:-3px; font-size:.9rem; font-style:italic;}
+#logo{margin-top: 50px;}
+/* Page Intro
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{padding:120px 0; text-align:center;}
+#pageintro article{display:block; max-width:60%; margin:0 auto;}
+#pageintro article .introtxt{margin:0 0 50px 0; padding:30px; border-radius:0 50px;}
+#pageintro article .heading{margin-bottom:30px; font-size:36px;}
+#pageintro article p:last-of-type{margin-bottom:0;}
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+
+#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:.5;}
+#backtotop:hover{opacity:1;}
+
+/* Header */
+#header #logo a{color:inherit;}
+
+/* Page Intro */
+#pageintro article{color:#FFFFFF;}
+#pageintro article .introtxt{color:#a33232; background-color:rgba(255,255,255,.75);}
+/*Back to Top*/
+#backtotop{color:#FFFFFF; background-color:#ff4242;}
+
+#face{text-align: left;color: black;font-family: "Text";}
+#flogo{height: 15%;width: 15%;float: left;border: 0px;margin-bottom: 30px;}
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:978px){
+	.hoc{max-width:978px;}
+}
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:900px){
+	.hoc{max-width:90%;}
+
+	#header{}
+	#mainav{}
+	#mainav ul{display:none;}
+	#mainav form{display:block;}
+	.text{
+	  margin: 0px 50px 20px 50px;
+	}
+}
+
+
+@media screen and (max-width:450px){
+	#pageintro article{max-width:95%;}
+	.text{
+	  margin: 0px 20px 20px 20px;
+	}
+	.navbar-brand h1{
+		font-size: 15px;
+	}
+	.text li{
+		font-size: 17px;
+	}
+	p{
+		font-size: 14px;
+	}
+	.icons{
+	  padding-right: 5%;
+	  padding-left: -20px;
+		height: 40px;
+		width: 40px;
+	}
+	#face{text-align: left;word-break: keep-all;color: black;font-family: "Text";font-size: 15px;}
+	#flogo{height: 30%;width: 30%;float: right;border: 0px;margin-bottom: 30px;}
+}
